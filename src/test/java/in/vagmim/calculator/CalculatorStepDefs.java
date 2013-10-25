@@ -22,7 +22,7 @@ public class CalculatorStepDefs {
 
 	@When("^I have bought the following$")
 	public void I_have_bought_the_following(List<Grocery> groceries) throws Throwable {
-		for(int i=0;i<=groceries.size()-2;i++) {
+		for(int i=0;i<groceries.size()-1;i++) {
 			calculator.push(groceries.get(i).getPrice());
 			calculator.push("+");
 		}
